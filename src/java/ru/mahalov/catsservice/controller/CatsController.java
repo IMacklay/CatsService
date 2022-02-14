@@ -15,7 +15,7 @@ import java.util.List;
 public class CatsController {
 
     @Autowired
-    CatsService catsService;
+    private CatsService catsService;
 
     @GetMapping("/cats")
     public ResponseEntity<List<CatsDTO>> getAllCats(){
