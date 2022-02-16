@@ -32,7 +32,7 @@ public class CatsEntity {
     public CatsEntity(CatsDTO catsDTO){
         name = catsDTO.getName();
         color = catsDTO.getColor();
-        tailLength = catsDTO.getTailLength();
+        tailLength = catsDTO.getTail_length();
         whiskersLength = getWhiskersLength();
     }
 }

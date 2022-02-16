@@ -1,8 +1,6 @@
 package ru.mahalov.catsservice.dto;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonView;
+import com.fasterxml.jackson.annotation.*;
 import lombok.*;
 import ru.mahalov.catsservice.entities.CatsEntity;
 
@@ -18,15 +16,16 @@ public class CatsDTO implements Serializable {
     private String color;
 
     @JsonProperty("tail_length")
-    private Integer tailLength;
+    @JsonAlias("tail_length")
+    private Integer tail_length;
 
     @JsonProperty("whiskers_length")
-    private Integer whiskersLength;
+    private Integer whiskers_length;
 
     public CatsDTO(CatsEntity catsEntity){
         name = catsEntity.getName();
         color = catsEntity.getColor();
-        tailLength = catsEntity.getTailLength();
-        whiskersLength = catsEntity.getWhiskersLength();
+        tail_length = catsEntity.getTailLength();
+        whiskers_length = catsEntity.getWhiskersLength();
     }
 }
