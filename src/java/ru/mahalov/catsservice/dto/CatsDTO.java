@@ -17,15 +17,15 @@ public class CatsDTO implements Serializable {
 
     @JsonProperty("tail_length")
     @JsonAlias("tail_length")
-    private Integer tail_length;
+    private Integer tailLength;
 
     @JsonProperty("whiskers_length")
-    private Integer whiskers_length;
+    private Integer whiskersLength;
 
     public CatsDTO(CatsEntity catsEntity){
         name = catsEntity.getName();
         color = catsEntity.getColor();
-        tail_length = catsEntity.getTailLength();
-        whiskers_length = catsEntity.getWhiskersLength();
+        tailLength = catsEntity.getTailLength();
+        whiskersLength = catsEntity.getWhiskersLength();
     }
 }
